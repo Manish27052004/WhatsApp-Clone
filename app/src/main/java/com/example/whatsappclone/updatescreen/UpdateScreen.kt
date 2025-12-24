@@ -30,6 +30,9 @@ fun UpdateScreen()
         },
         bottomBar = {
             BottomNavigation()
+        },
+        topBar = {
+            TopBar()
         }
     ) {
         Column(modifier= Modifier.padding(it)) { }
