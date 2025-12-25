@@ -33,7 +33,9 @@ import com.example.whatsappclone.R
 @Composable
 
 fun MyStatus() {
-    Row(modifier = Modifier.fillMaxWidth().padding(12.dp), verticalAlignment = Alignment.CenterVertically) {
+    Row(modifier = Modifier
+        .fillMaxWidth()
+        .padding(12.dp), verticalAlignment = Alignment.CenterVertically) {
         Box() {
             Image(
                 painter = painterResource(id = R.drawable.bhuvan_bam),
@@ -60,7 +62,33 @@ fun MyStatus() {
         Spacer(modifier = Modifier.size(12.dp))
         Column() {
             Text(text= "My Status", fontWeight = FontWeight.Bold, fontSize = 16.sp)
+            Text(text = "Tap to add status update", color = Color.Gray, fontSize = 14.sp)
 
+        }
+    }
+
+}
+
+data class StatusData(val image: Int, val name: String, val time: String)
+@Composable
+
+fun StatusItem(statusData: StatusData) {
+    Row(
+        modifier = Modifier.fillMaxWidth()
+            .padding(horizontal = 12.dp, vertical = 8.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Image(
+            painter = painterResource(id = statusData.image),
+            contentDescription = null,
+            modifier = Modifier.size(60.dp).padding(4.dp).clip(CircleShape),
+            contentScale = ContentScale.Crop
+
+        )
+        Spacer(modifier = Modifier.size(12.dp))
+        Column() {
+            Text(text = statusData.name, fontSize = 16.sp, fontWeight = FontWeight.Bold )
+            Text(text =statusData.time, fontSize = 14.sp, color = Color.Gray )
         }
     }
 }
