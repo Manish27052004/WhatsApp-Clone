@@ -57,6 +57,22 @@ fun UpdateScreen() {
             "15min ago"
         )
     )
+    val SampleChannels = listOf(
+        ChannelData(
+            R.drawable.neat_roots,
+            "Neat Roots",
+            "Latest News for tech"
+        ),
+        ChannelData(
+            R.drawable.img,
+            "Food Lover",
+            "Discover New Recipes"
+
+        ),
+        ChannelData(
+            R.drawable.meta,
+            "Meta",
+            "Explore the Void" )     )
     Scaffold(
         floatingActionButton = {
             FloatingActionButton(
@@ -111,7 +127,11 @@ fun UpdateScreen() {
                 Text(text = "stay updated on topics that matter to you. Find channels to follow below")
                 Spacer(modifier = Modifier.height(32.dp))
                 Text("Find Channels to follow")
-                Spacer(modifier = Modifier.height(30.dp))
+
+            }
+            Spacer(modifier = Modifier.height(20.dp))
+            SampleChannels.forEach { data ->
+                ChannelItem(channelData = data)
             }
         }
 

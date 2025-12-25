@@ -14,6 +14,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.whatsappclone.UserRegistrationScreen.UserRegistrationScreen
 import com.example.whatsappclone.ui.theme.WhatsAppCloneTheme
 import com.example.whatsappclone.updatescreen.TopBar
+import com.example.whatsappclone.updatescreen.UpdateScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,7 +22,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             WhatsAppCloneTheme {
-                TopBar()
+                UpdateScreen()
             }
         }
     }
