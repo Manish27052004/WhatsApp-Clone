@@ -12,6 +12,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.whatsappclone.UserRegistrationScreen.UserRegistrationScreen
+import com.example.whatsappclone.navigation.WhatsappNavigationSystem
+import com.example.whatsappclone.splashScreen.SplashScreen
 import com.example.whatsappclone.ui.theme.WhatsAppCloneTheme
 import com.example.whatsappclone.updatescreen.TopBar
 import com.example.whatsappclone.updatescreen.UpdateScreen
@@ -22,7 +24,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             WhatsAppCloneTheme {
-                UpdateScreen()
+                WhatsappNavigationSystem()
             }
         }
     }
