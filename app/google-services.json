@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1062183088457",
+    "project_id": "todomanager-934ac1b4",
+    "storage_bucket": "todomanager-934ac1b4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1062183088457:android:1b34932722acb401c1aa98",
+        "android_client_info": {
+          "package_name": "com.example.whatsappclone"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMu8t8bmRLeHojhCC0fpYKKlh86SSb2g0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
