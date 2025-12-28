@@ -20,6 +20,8 @@ sealed class Routes {
     data object UpdateScreen : Routes()
     @Serializable
     data object CommunitiesScreen : Routes()
+    @Serializable
+    data object UserProfileScreen: Routes()
 }
 
 

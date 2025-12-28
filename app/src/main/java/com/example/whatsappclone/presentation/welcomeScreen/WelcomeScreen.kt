@@ -26,7 +26,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import com.example.whatsappclone.R
-import com.example.whatsappclone.navigation.Routes
+import com.example.whatsappclone.presentation.navigation.Routes
+
 
 @Composable
 

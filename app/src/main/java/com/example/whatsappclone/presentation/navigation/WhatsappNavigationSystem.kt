@@ -5,13 +5,13 @@ import androidx.navigation.NavHost
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.whatsappclone.CallScreen.CallScreen
-import com.example.whatsappclone.UserRegistrationScreen.UserRegistrationScreen
-import com.example.whatsappclone.homescreen.HomeScreen
-import com.example.whatsappclone.splashScreen.SplashScreen
+import com.example.whatsappclone.presentation.CallScreen.CallScreen
+import com.example.whatsappclone.presentation.UserRegistrationScreen.UserRegistrationScreen
+import com.example.whatsappclone.presentation.homescreen.HomeScreen
+import com.example.whatsappclone.presentation.splashScreen.SplashScreen
+import com.example.whatsappclone.presentation.updatescreen.UpdateScreen
+import com.example.whatsappclone.presentation.welcomeScreen.WelcomeScreen
 import com.example.whatsappclone.updatescreen.CommunitiesScreen
-import com.example.whatsappclone.updatescreen.UpdateScreen
-import com.example.whatsappclone.welcomeScreen.WelcomeScreen
 
 @Composable
 fun WhatsappNavigationSystem()
@@ -22,7 +22,7 @@ fun WhatsappNavigationSystem()
             SplashScreen(navController)
         }
         composable<Routes.UserRegistrationScreen>{
-            UserRegistrationScreen()
+            UserRegistrationScreen(navController)
         }
         composable<Routes.WelcomeScreen>{
             WelcomeScreen(navController)

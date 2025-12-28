@@ -28,11 +28,14 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.whatsappclone.CommunitiesScreen.CommunitiesData
-import com.example.whatsappclone.CommunitiesScreen.CommunitiesItem
-import com.example.whatsappclone.CommunitiesScreen.CommunitiesTopBar
+
+
 import com.example.whatsappclone.R
-import com.example.whatsappclone.bottomnavigation.BottomNavigation
+
+import com.example.whatsappclone.presentation.CommunitiesScreen.CommunitiesData
+import com.example.whatsappclone.presentation.CommunitiesScreen.CommunitiesItem
+import com.example.whatsappclone.presentation.CommunitiesScreen.CommunitiesTopBar
+import com.example.whatsappclone.presentation.bottomnavigation.BottomNavigation
 
 @Composable
 @Preview(showSystemUi = true)
@@ -54,7 +57,9 @@ fun CommunitiesScreen() {
         CommunitiesData(
             R.drawable.meta,
             "Meta",
-            382 )     )
+            382
+        )
+    )
     Scaffold(
         floatingActionButton = {
             FloatingActionButton(

@@ -17,7 +17,9 @@ import com.example.whatsappclone.presentation.splashScreen.SplashScreen
 import com.example.whatsappclone.ui.theme.WhatsAppCloneTheme
 import com.example.whatsappclone.presentation.updatescreen.TopBar
 import com.example.whatsappclone.presentation.updatescreen.UpdateScreen
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

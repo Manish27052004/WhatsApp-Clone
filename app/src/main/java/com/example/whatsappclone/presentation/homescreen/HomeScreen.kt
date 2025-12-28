@@ -25,7 +25,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.whatsappclone.R
-import com.example.whatsappclone.bottomnavigation.BottomNavigation
+import com.example.whatsappclone.presentation.bottomnavigation.BottomNavigation
 
 @Composable
 @Preview(showSystemUi = true)
