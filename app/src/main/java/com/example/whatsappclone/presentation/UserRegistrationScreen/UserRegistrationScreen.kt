@@ -146,13 +146,7 @@ fun UserRegistrationScreen(navHostController: NavHostController, phoneAuthViewMo
         )
 
         Spacer(modifier = Modifier.width(28.dp))
-        Button(
-            onClick = {},
-            shape = RoundedCornerShape(6.dp),
-            colors = ButtonDefaults.buttonColors(containerColor = colorResource(id = R.color.dark_green))
-        ) {
-            Text("Next", fontSize = 16.sp)
-        }
+
         when(authState)
         {
             is AuthState.Ideal, is AuthState.Loading, is AuthState.CodeSent -> {
@@ -162,7 +156,7 @@ fun UserRegistrationScreen(navHostController: NavHostController, phoneAuthViewMo
                 }
                 if (verificationId == null){
                     Spacer(modifier = Modifier.height(16.dp))
-                    Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.fillMaxWidth()) {
+                    Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.fillMaxWidth().padding(start = 20.dp)) {
                         TextField(
                             value = countryCode,
                             onValueChange = {
@@ -186,7 +180,7 @@ fun UserRegistrationScreen(navHostController: NavHostController, phoneAuthViewMo
                             value = phonenumber, onValueChange = {
                                 phonenumber = it
                             },
-                            modifier = Modifier.width(190.dp),
+                            modifier = Modifier.fillMaxWidth().padding(end = 20.dp),
                             singleLine = true,
                             textStyle = LocalTextStyle.current.copy(fontSize = 18.sp),
                             colors = TextFieldDefaults.colors(
@@ -199,22 +193,23 @@ fun UserRegistrationScreen(navHostController: NavHostController, phoneAuthViewMo
 
                                 )
                         )
-                        Spacer(modifier = Modifier.width(28.dp))
-                        Button(
-                            onClick = {
-                                if(phonenumber.isNotEmpty()){
-                                    val fullPhoneNumber = countryCode + phonenumber
-                                    phoneAuthViewModel.sendVerificationCode(fullPhoneNumber, activity)
-                                }else{
-                                    Toast.makeText(context, "", Toast.LENGTH_SHORT).show()
-                                }
-                            },
-                            shape = RoundedCornerShape(6.dp),
-                            colors = ButtonDefaults.buttonColors(containerColor = colorResource(id = R.color.dark_green))
-                        ) {
-                            Text("Send OTP", fontSize = 16.sp)
-                        }
 
+
+                    }
+                    Spacer(modifier = Modifier.height(28.dp))
+                    Button(
+                        onClick = {
+                            if(phonenumber.isNotEmpty()){
+                                val fullPhoneNumber = countryCode + phonenumber
+                                phoneAuthViewModel.sendVerificationCode(fullPhoneNumber, activity)
+                            }else{
+                                Toast.makeText(context, "", Toast.LENGTH_SHORT).show()
+                            }
+                        },
+                        shape = RoundedCornerShape(6.dp),
+                        colors = ButtonDefaults.buttonColors(containerColor = colorResource(id = R.color.dark_green))
+                    ) {
+                        Text("Send OTP", fontSize = 16.sp)
                     }
                     if (authState is AuthState.Loading) {
                         Spacer(modifier = Modifier.width(16.dp))
